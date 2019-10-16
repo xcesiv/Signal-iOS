@@ -56,6 +56,10 @@
 		3416BCAA227763A500E761B4 /* OWSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3416BCA8227763A500E761B4 /* OWSMessageView.m */; };
 		3416BCAC227798D100E761B4 /* StickerPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416BCAB227798D000E761B4 /* StickerPackViewController.swift */; };
 		3416BCAE2277A24000E761B4 /* StickerPackDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416BCAD2277A24000E761B4 /* StickerPackDataSource.swift */; };
+		341C290423577CC600DB3350 /* UIWindow+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C28FF23577CC600DB3350 /* UIWindow+Swizzle.swift */; };
+		341C290523577CC600DB3350 /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C290023577CC600DB3350 /* Visualizer.swift */; };
+		341C290623577CC600DB3350 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C290223577CC600DB3350 /* TouchView.swift */; };
+		341C290723577CC600DB3350 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C290323577CC600DB3350 /* Configuration.swift */; };
 		341F2C0F1F2B8AE700D07D6B /* DebugUIMisc.m in Sources */ = {isa = PBXBuildFile; fileRef = 341F2C0E1F2B8AE700D07D6B /* DebugUIMisc.m */; };
 		3421981C21061D2E00C57195 /* ByteParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421981B21061D2E00C57195 /* ByteParserTest.swift */; };
 		34277A5E20751BDC006049F2 /* OWSQuotedMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34277A5C20751BDC006049F2 /* OWSQuotedMessageView.m */; };
@@ -815,6 +819,11 @@
 		3416BCA9227763A500E761B4 /* OWSMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSMessageView.h; sourceTree = "<group>"; };
 		3416BCAB227798D000E761B4 /* StickerPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackViewController.swift; sourceTree = "<group>"; };
 		3416BCAD2277A24000E761B4 /* StickerPackDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackDataSource.swift; sourceTree = "<group>"; };
+		341C28FF23577CC600DB3350 /* UIWindow+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swizzle.swift"; sourceTree = "<group>"; };
+		341C290023577CC600DB3350 /* Visualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
+		341C290123577CC600DB3350 /* TouchVisualizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchVisualizer.h; sourceTree = "<group>"; };
+		341C290223577CC600DB3350 /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
+		341C290323577CC600DB3350 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		341F2C0D1F2B8AE700D07D6B /* DebugUIMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugUIMisc.h; sourceTree = "<group>"; };
 		341F2C0E1F2B8AE700D07D6B /* DebugUIMisc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugUIMisc.m; sourceTree = "<group>"; };
 		3421981B21061D2E00C57195 /* ByteParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteParserTest.swift; sourceTree = "<group>"; };
@@ -1758,6 +1767,26 @@
 			path = ThreadSettings;
 			sourceTree = "<group>";
 		};
+		341C28FD23577CC600DB3350 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				341C28FE23577CC600DB3350 /* TouchVisualizer */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		341C28FE23577CC600DB3350 /* TouchVisualizer */ = {
+			isa = PBXGroup;
+			children = (
+				341C28FF23577CC600DB3350 /* UIWindow+Swizzle.swift */,
+				341C290023577CC600DB3350 /* Visualizer.swift */,
+				341C290123577CC600DB3350 /* TouchVisualizer.h */,
+				341C290223577CC600DB3350 /* TouchView.swift */,
+				341C290323577CC600DB3350 /* Configuration.swift */,
+			);
+			path = TouchVisualizer;
+			sourceTree = "<group>";
+		};
 		34330A581E7875FB00DF2FB9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -2607,6 +2636,7 @@
 				76EB041D18170B33006006FC /* network */,
 				45B201741DAECBFD00C461E0 /* Signal-Bridging-Header.h */,
 				45CD81A41DBFF8CF004C9430 /* Storyboards */,
+				341C28FD23577CC600DB3350 /* ThirdParty */,
 				450DF2061E0DD28D003D14BE /* UserInterface */,
 				76EB04C818170B33006006FC /* util */,
 			);
@@ -4053,6 +4083,7 @@
 				4CD675C722E7D393008010D2 /* MediaPresentationContext.swift in Sources */,
 				451A13B11E13DED2000A50FD /* AppNotifications.swift in Sources */,
 				34D99CE4217509C2000AFB39 /* AppEnvironment.swift in Sources */,
+				341C290423577CC600DB3350 /* UIWindow+Swizzle.swift in Sources */,
 				348570A820F67575004FF32B /* OWSMessageHeaderView.m in Sources */,
 				450DF2091E0DD2C6003D14BE /* UserNotificationsAdaptee.swift in Sources */,
 				34B6A907218B5241007C4606 /* TypingIndicatorCell.swift in Sources */,
@@ -4137,6 +4168,7 @@
 				45A6DAD61EBBF85500893231 /* ReminderView.swift in Sources */,
 				34D1F0881F8678AA0066283D /* ConversationViewLayout.m in Sources */,
 				4CA485BB2232339F004B9E7D /* PhotoCaptureViewController.swift in Sources */,
+				341C290623577CC600DB3350 /* TouchView.swift in Sources */,
 				3448E16422135FFA004B052E /* OnboardingPhoneNumberViewController.swift in Sources */,
 				34330AA31E79686200DF2FB9 /* OWSProgressView.m in Sources */,
 				347137FC22A1BCE800F43A63 /* OWSMessageViewOnceView.m in Sources */,
@@ -4147,6 +4179,7 @@
 				3448E15C22133274004B052E /* OnboardingPermissionsViewController.swift in Sources */,
 				34D920E720E179C200D51158 /* OWSMessageFooterView.m in Sources */,
 				341341EF2187467A00192D59 /* ConversationViewModel.m in Sources */,
+				341C290723577CC600DB3350 /* Configuration.swift in Sources */,
 				348BB25D20A0C5530047AEC2 /* ContactShareViewHelper.swift in Sources */,
 				34B3F8801E8DF1700035BE1A /* InviteFlow.swift in Sources */,
 				457C87B82032645C008D52D6 /* DebugUINotifications.swift in Sources */,
@@ -4205,6 +4238,7 @@
 				45F32C242057297A00A300D5 /* MessageDetailViewController.swift in Sources */,
 				4C19A0FC227B356F007A0C7F /* DebugUIMessages+OWS.swift in Sources */,
 				3496955C219B605E00DCFE74 /* ImagePickerController.swift in Sources */,
+				341C290523577CC600DB3350 /* Visualizer.swift in Sources */,
 				34D1F0841F8678AA0066283D /* ConversationInputToolbar.m in Sources */,
 				4CBBFE4A2306F5D300B37450 /* LogViewController.swift in Sources */,
 				457F671B20746193000EABCD /* QuotedReplyPreview.swift in Sources */,

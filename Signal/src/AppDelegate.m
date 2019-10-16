@@ -290,6 +290,8 @@ typedef NS_ENUM(NSUInteger, LaunchFailure) {
         }];
 
     [UIUtil setupSignalAppearence];
+    
+    [Visualizer startOWS];
 
     UIWindow *mainWindow = [[OWSWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = mainWindow;
