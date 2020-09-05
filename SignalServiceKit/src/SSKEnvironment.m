@@ -54,7 +54,7 @@ static SSKEnvironment *sharedSSKEnvironment;
 @property (nonatomic) id<VersionedProfiles> versionedProfiles;
 @property (nonatomic) ModelReadCaches *modelReadCaches;
 @property (nonatomic) EarlyMessageManager *earlyMessageManager;
-@property (nonatomic) OWSMessagePipelineSupervisor *messagePipelineSupervisor;
+@property (nonatomic) MessagePipelineSupervisor *messagePipelineSupervisor;
 
 @end
 
@@ -113,7 +113,7 @@ static SSKEnvironment *sharedSSKEnvironment;
                       versionedProfiles:(id<VersionedProfiles>)versionedProfiles
                         modelReadCaches:(ModelReadCaches *)modelReadCaches
                     earlyMessageManager:(EarlyMessageManager *)earlyMessageManager
-              messagePipelineSupervisor:(OWSMessagePipelineSupervisor *)messagePipelineSupervisor
+              messagePipelineSupervisor:(MessagePipelineSupervisor *)messagePipelineSupervisor
 {
     self = [super init];
     if (!self) {

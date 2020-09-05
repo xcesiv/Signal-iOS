@@ -119,8 +119,8 @@ NS_ASSUME_NONNULL_BEGIN
         id<VersionedProfiles> versionedProfiles = [VersionedProfilesImpl new];
         ModelReadCaches *modelReadCaches = [ModelReadCaches new];
         EarlyMessageManager *earlyMessageManager = [EarlyMessageManager new];
-        OWSMessagePipelineSupervisor *messagePipelineSupervisor =
-            [OWSMessagePipelineSupervisor createStandardSupervisor];
+        MessagePipelineSupervisor *messagePipelineSupervisor =
+            [MessagePipelineSupervisor createStandardSupervisor];
         ContactsViewHelper *contactsViewHelper = [ContactsViewHelper new];
 
         [Environment setShared:[[Environment alloc] initWithAudioSession:audioSession

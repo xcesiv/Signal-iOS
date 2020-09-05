@@ -109,7 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
     id<VersionedProfiles> versionedProfiles = [MockVersionedProfiles new];
     ModelReadCaches *modelReadCaches = [ModelReadCaches new];
     EarlyMessageManager *earlyMessageManager = [EarlyMessageManager new];
-    OWSMessagePipelineSupervisor *messagePipelineSupervisor = [OWSMessagePipelineSupervisor createStandardSupervisor];
+    MessagePipelineSupervisor *messagePipelineSupervisor = [MessagePipelineSupervisor createStandardSupervisor];
 
     self = [super initWithContactsManager:contactsManager
                        linkPreviewManager:linkPreviewManager

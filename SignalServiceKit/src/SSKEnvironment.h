@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class OWSLinkPreviewManager;
 @class OWSMessageDecrypter;
 @class OWSMessageManager;
-@class OWSMessagePipelineSupervisor;
+@class MessagePipelineSupervisor;
 @class OWSMessageReceiver;
 @class OWSMessageSender;
 @class OWSOutgoingReceiptManager;
@@ -109,7 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
                       versionedProfiles:(id<VersionedProfiles>)versionedProfiles
                         modelReadCaches:(ModelReadCaches *)modelReadCaches
                     earlyMessageManager:(EarlyMessageManager *)earlyMessageManager
-              messagePipelineSupervisor:(OWSMessagePipelineSupervisor *)messagePipelineSupervisor
+              messagePipelineSupervisor:(MessagePipelineSupervisor *)messagePipelineSupervisor
     NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic, readonly, class) SSKEnvironment *shared;
@@ -169,7 +169,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) id<VersionedProfiles> versionedProfiles;
 @property (nonatomic, readonly) ModelReadCaches *modelReadCaches;
 @property (nonatomic, readonly) EarlyMessageManager *earlyMessageManager;
-@property (nonatomic, readonly) OWSMessagePipelineSupervisor *messagePipelineSupervisor;
+@property (nonatomic, readonly) MessagePipelineSupervisor *messagePipelineSupervisor;
 
 @property (nonatomic, readonly, nullable) OWSPrimaryStorage *primaryStorage;
 

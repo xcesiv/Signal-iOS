@@ -4,7 +4,7 @@
 
 import Foundation
 
-@objc(OWSMessagePipelineSupervisor)
+@objc
 public class MessagePipelineSupervisor: NSObject {
 
     // MARK: - Stored Properties

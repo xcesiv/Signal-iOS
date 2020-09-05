@@ -184,7 +184,7 @@ NSNotificationName const kNSNotificationNameMessageProcessingDidFlushQueue
     return SSKEnvironment.shared.groupsV2MessageProcessor;
 }
 
-- (OWSMessagePipelineSupervisor *)pipelineSupervisor
+- (MessagePipelineSupervisor *)pipelineSupervisor
 {
     return SSKEnvironment.shared.messagePipelineSupervisor;
 }
@@ -383,7 +383,7 @@ NSNotificationName const kNSNotificationNameMessageProcessingDidFlushQueue
 
 #pragma mark - <OWSMessageProcessingPipelineStage>
 
-- (void)supervisorDidResumeMessageProcessing:(OWSMessagePipelineSupervisor *)supervisor
+- (void)supervisorDidResumeMessageProcessing:(MessagePipelineSupervisor *)supervisor
 {
     [AppReadiness runNowOrWhenAppDidBecomeReady:^{ [self drainQueue]; }];
 }

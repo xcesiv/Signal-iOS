@@ -342,7 +342,7 @@ NSString *const OWSMessageDecryptJobFinderExtensionGroup = @"OWSMessageProcessin
     return SSKEnvironment.shared.profileManager;
 }
 
-- (OWSMessagePipelineSupervisor *)pipelineSupervisor
+- (MessagePipelineSupervisor *)pipelineSupervisor
 {
     return SSKEnvironment.shared.messagePipelineSupervisor;
 }
@@ -502,7 +502,7 @@ NSString *const OWSMessageDecryptJobFinderExtensionGroup = @"OWSMessageProcessin
 
 #pragma mark - <OWSMessageProcessingPipelineStage>
 
-- (void)supervisorDidResumeMessageProcessing:(OWSMessagePipelineSupervisor *)supervisor
+- (void)supervisorDidResumeMessageProcessing:(MessagePipelineSupervisor *)supervisor
 {
     [AppReadiness runNowOrWhenAppDidBecomeReady:^{ [self drainQueue]; }];
 }
